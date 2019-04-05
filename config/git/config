@@ -1,0 +1,26 @@
+[user]
+	name = Piotr Wójcik
+	email = chocimier@tlen.pl
+[alias]
+	co = status
+	cz = checkout
+	cp = cherry-pick
+	rb10 = rebase HEAD~10 -i --autosquash
+	rb20 = rebase HEAD~20 -i --autosquash
+	rb70 = rebase HEAD~70 -i --autosquash
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbs = rebase --skip
+	coam = commit --amend --reuse-message=HEAD
+	puf = push --force-with-lease
+[grep]
+	lineNumber = true
+
+[gui]
+	spellingdictionary = en
+[format]
+	pretty = short
+[diff]
+	algorithm = minimal
+[advice]
+	detachedHead = false
