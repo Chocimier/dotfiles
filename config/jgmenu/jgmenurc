@@ -1,0 +1,5 @@
+menu_halign = left
+icon_theme = oxygen
+arrow_string = ➤
+csv_cmd = lx
+csv_name_format = %n
