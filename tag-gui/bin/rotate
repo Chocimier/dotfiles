@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+set -l side
+set -l screen (xrandr | grep ' connected' | cut -d\  -f 1)
+
+xrandr | grep " connected" | grep "+0+0 left" -c
+and set side normal
+or set side left
+
+xrandr --output $screen --rotation $side
