@@ -1,0 +1,9 @@
+! /usr/include/X11/keysymdef.h
+! xmodmap -pke
+
+keycode 25 = Greek_omega Greek_OMEGA
+keycode 27 = Greek_rho Greek_RHO
+keycode 30 = Greek_eta Greek_ETA
+keycode 43 = Greek_chi Greek_CHI
+keycode 53 = Greek_xi Greek_XI
+keycode 55 = Greek_theta Greek_THETA

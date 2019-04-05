@@ -1,0 +1,12 @@
+! /usr/include/X11/keysymdef.h
+! xmodmap -pke
+
+keycode 30 = u U u U ubreve Ubreve
+keycode 39 = s S s S scircumflex Scircumflex
+keycode 42 = g G g G gcircumflex Gcircumflex
+keycode 43 = h H h H hcircumflex Hcircumflex
+keycode 44 = j J j J jcircumflex Jcircumflex
+keycode 54 = c C c C ccircumflex Ccircumflex
+
+keycode 20 = minus underscore minus underscore U2010 emdash
+keycode 48 = apostrophe quotedbl apostrophe quotedbl leftdoublequotemark rightdoublequotemark

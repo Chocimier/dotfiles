@@ -1,0 +1,19 @@
+! /usr/include/X11/keysymdef.h
+! xmodmap -pke
+
+! dywiz
+keycode 20 = minus underscore minus underscore U2010 emdash
+keycode 21 = equal plus equal plus notequal dead_ogonek
+keycode 24 = q Q q Q zstroke Zstroke
+keycode 25 = w W w W
+keycode 27 = r R r R Greek_rho Greek_RHO
+keycode 28 = t T t T uptack downtack
+keycode 33 = p P p P Greek_pi Greek_PI
+keycode 41 = f F f F Greek_phi emptyset
+! nuty
+keycode 44 = j J j J U266A U266B
+keycode 48 = apostrophe quotedbl apostrophe quotedbl doublelowquotemark rightdoublequotemark
+keycode 55 = v V v V squareroot cuberoot
+keycode 59 = comma less comma less dead_caron guillemotright
+keycode 60 = period greater period greater ellipsis guillemotleft
+keycode 61 = slash question slash question multiply division

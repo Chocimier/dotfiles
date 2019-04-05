@@ -1,0 +1,7 @@
+! /usr/include/X11/keysymdef.h
+! xmodmap -pke
+! apply onto setxkbmap ru -variant phonetic
+
+keycode  21 = Cyrillic_che Cyrillic_CHE Cyrillic_che Cyrillic_CHE
+keycode  43 = Cyrillic_ha Cyrillic_HA Cyrillic_ha Cyrillic_HA
+keycode  53 = Cyrillic_softsign Cyrillic_softsign Cyrillic_softsign Cyrillic_softsign
