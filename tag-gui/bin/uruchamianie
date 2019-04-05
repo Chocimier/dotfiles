@@ -1,0 +1,27 @@
+#!/bin/sh
+# Runs dmenu to ask for program, then runs it.
+# If typed in text is prepended with semicolon, it is run in shell.
+# Variable data is name of file that list programs to select from.
+# It is a json array of objects with two keys: "name" and "command"
+#
+# Depends on: dmenu, jq
+#
+# Example data:
+# [
+# {"name": "Git browser", "command": "git gui"},
+# {"name": "Sth", "command": "~/local/build/of/sth"}
+# ]
+
+font="Linux Biolinum O-15"
+data="${XDG_CONFIG_HOMEs:-$HOME/.config}/uruchamianie/data.json"
+
+name=$(
+	jq -r '.[] | .name' "$data" |
+	dmenu -fn "$font" -l 80 -p "Uruchom program" -i
+	)
+command=$(
+	jq -r '.[] | select(.name == "'"$name"'") | .command' "$data" |
+	sed 's,^~/,'"$HOME"/,
+)
+[ -z "$command" ] && [ "${name%"${name#?}"}" = ";" ] && command="${name#?}"
+[ "$command" ] && env -S $command &
