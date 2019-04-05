@@ -34,4 +34,4 @@ cd "$(dirname $0)"
 dotfiles="$(pwd)"
 cd - > /dev/null
 
-RCRC="$dotfiles/rcrc" rcup -d "$dotfiles"
+RCRC="$dotfiles/rcrc" rcup -d "$dotfiles" "$@"
