@@ -1,0 +1,13 @@
+#!/usr/bin/env fish
+# mail me
+# usage: mme TIMESPEC subject body of mail
+#        where TIMESPEC is number of minutes or at's timespec
+# creates `at` job that sends local mail as a reminder
+
+set -l address $USER@localhost
+
+set -l timespec $argv[1]
+if test -z (echo -n $timespec | tr -d 0-9)
+	set timespec "now+"$timespec"min"
+end
+echo "echo $argv[3..-1] | mail -s $argv[2] $address" | at $timespec
