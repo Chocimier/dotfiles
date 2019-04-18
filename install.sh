@@ -28,6 +28,9 @@ fi
 if ! [ -d ~/.tackle ]; then
 	git clone https://github.com/justinmayer/tackle ~/.tackle
 fi
+if ! [ -d ~/.local/share/nvim/bundle/Vundle.vim ]; then
+	git clone https://github.com/VundleVim/Vundle.vim ~/.local/share/nvim/bundle/Vundle.vim
+fi
 
 # find directory
 cd "$(dirname $0)"
