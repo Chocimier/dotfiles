@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+if test (count $argv) != 2
+	echo "Usage: "(status filename)" filename output_ext"
+	exit 1
+end
+set output $argv[1].$argv[2]
+ffmpeg -i $argv[1] -vn -acodec copy $output
+or rm $output
