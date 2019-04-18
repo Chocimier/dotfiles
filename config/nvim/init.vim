@@ -56,6 +56,8 @@ if has("autocmd")
       \   exe "normal! g`\"" |
       \ endif
   augroup END
+  let ftNoTrim = ['diff']
+  autocmd BufWritePre *  if index(ftNoTrim, &ft) < 0 | :%s/\s\+$//e | endif
 endif
 
 " Convenient command to see the difference between the current buffer and the
@@ -91,7 +93,6 @@ nnoremap ; :
 nnoremap : ;
 vnoremap ; :
 vnoremap : ;
-autocmd BufWritePre * :%s/\s\+$//e
 " show tab char
 set list
 set listchars=tab:▸\ ,trail:·
