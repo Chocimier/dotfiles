@@ -19,6 +19,8 @@ compinit
 promptinit
 colors
 
+shellbgcolor=magenta
+
 bindkey -v
 bindkey '^r' history-incremental-search-backward
 typeset -g -A key
@@ -36,6 +38,7 @@ key[Delete]=${terminfo[kdch1]}
 [[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"     vi-end-of-line
 [[ -n "${key[Delete]}"  ]]  && bindkey  "${key[Delete]}"  delete-char
 
+alias lsm="ls -1UN --color=never"
 alias ls="ls --color"
 alias fanfary="play ~/alarm.ogg > /dev/null 2> /dev/null"
 alias free='free -h'
@@ -51,13 +54,13 @@ function mkcd()
     cd "$1"
 }
 
-PROMPT="%{$bg[green]$fg[black]%} %~ %{$reset_color%}    %T %(?::%{$fg[yellow]%}%?%{$reset_color%})
+PROMPT="%{$bg[$shellbgcolor]$fg[black]%} %~ %{$reset_color%}    %T %(?::%{$fg[yellow]%}%?%{$reset_color%})
 "
 PS2="+= "
 
 function zle-line-init zle-keymap-select {
 	local vimode="${${KEYMAP/vicmd/[NORMAL]}/main/[INSERT]}"
-	PROMPT="%{$bg[green]$fg[black]%} %~ %{$reset_color%} %(?::%{$fg[yellow]%}%?%{$reset_color%}) ${(l:8:: :)vimode}
+	PROMPT="%{$bg[$shellbgcolor]$fg[black]%} %~ %{$reset_color%} %(?::%{$fg[yellow]%}%?%{$reset_color%}) ${(l:8:: :)vimode}
 "
     zle reset-prompt
 }
