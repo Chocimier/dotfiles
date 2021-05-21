@@ -4,4 +4,4 @@ define log10(a) = log(a)/log(10)
 define logn(a, p) = log(a)/log(p)
 pi = 2*acos(0)
 e = exp(1)
-fi = (1+5^.5)/2
+fi = (1+5^0.5)/2
